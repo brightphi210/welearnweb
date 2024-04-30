@@ -1,6 +1,7 @@
 import React from 'react'
 
-export const Section1 = () => {
+
+export const home = () => {
   return (
     <div>
       
