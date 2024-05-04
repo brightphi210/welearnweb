@@ -27,21 +27,21 @@
 }
 
 .header-text {
-    margin-right: 4rem;
+    margin-right: 6rem;
 }
 
 .header-text h1 {
     font-family: var(--font-family);
-    font-size: 45px;
-    font-weight: 650;
+    font-size: 48px;
+    font-weight: 700;
     line-height: 80px;
     margin-bottom: 2rem;
 }
 
 .header-text p {
     font-family: var(--font-family);
-    font-size: 22px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 500;
     line-height: 40px;
     margin-bottom: 2rem;
 }
@@ -110,7 +110,9 @@
         line-height: 55px;
         margin-bottom: 1rem;
     }
-
+    .header-text {
+        margin-right: 4rem;
+    }
     .header-text p {
         line-height: 28px;
         width: 500px;
@@ -137,8 +139,14 @@
 }
 
 @media screen and (max-width: 770px) {
+    .header-content {
+        flex-direction: column-reverse;
+    }
+    .header-text {
+        margin-right: 1rem;
+    }
     .header-img img {
-        width: 280px;
+        width: 400px;
         top: -100px;
     }
     .header-text h1 {
@@ -148,7 +156,7 @@
     .header-text p {
         font-size: 16px;
         line-height: 22px;
-        width: 300px;
+        width: 350px;
     }
     .header-bar {
         top: 400px;
@@ -157,11 +165,14 @@
         font-size: 28px;
         padding: 20px 0;
     }
+    .header-text button {
+        margin-bottom: 1rem;
+    }
 }
 
 @media screen and (max-width: 650px) {
     .header-img img {
-        width: 230px;
+        width: 350px;
         top: -100px;
     }
     .header-text h1 {
@@ -177,7 +188,6 @@
     }
     .header-text button {
         font-size: 12px;
-        margin-bottom: 5rem;
     }
     .header-bar {
         top: 350px;

@@ -176,7 +176,7 @@
     .service-box5 p {
         font-size: 14px;
         line-height: 23px;
-        width: 400px;
+        width: 300px;
         margin-bottom: 1rem;
     }
     .service-box1 img,
@@ -185,21 +185,21 @@
     .service-box4 img,
     .service-box5 img {
         top: 48%;
-        left: 80%;
+        left: 70%;
         width: 85px;
         height: 95px;
     }
     .service-box4 img {
         top: 43%;
-        left: 80%;
+        left: 70%;
     }
     .service-box5 img {
         top: 47%;
-        left: 80%;
+        left: 70%;
     }
 }
 
-@media screen and (min-width: 377px) and (max-width: 426px) {
+@media screen and (min-width: 377px) and (max-width: 427px) {
     .first-role {
         grid-template-columns: 1fr;
     }
@@ -219,6 +219,7 @@
     .service-box3 p,
     .service-box4 p,
     .service-box5 p {
+        width: 260px;
         font-size: 12px;
         line-height: 20px;
         margin-bottom: 1rem;
@@ -244,7 +245,7 @@
 }
 
 
-@media screen and (min-width: 323px) and (max-width: 376px) {
+@media screen and (min-width: 323px) and (max-width: 377px) {
     .first-role {
         grid-template-columns: 1fr;
     }
@@ -265,8 +266,9 @@
     .service-box4 p,
     .service-box5 p {
         font-size: 12px;
-        line-height: 20px;
-        width: 260px;
+        line-height: 18px;
+        width: 200px;
+        margin-bottom: 0;
     }
 
     .service-box1 img,
@@ -287,11 +289,11 @@
 
     .service-box5 img {
         top: 50%;
-        left: 70%;
+        left: 65%;
     }
 }
 
-@media screen and (max-width: 322px) {
+@media screen and (max-width: 323px) {
     .first-role {
         grid-template-columns: 1fr;
     }
@@ -314,6 +316,7 @@
         font-size: 12px;
         line-height: 20px;
         width: 200px;
+        margin-bottom: 0;
     }
 
     .service-box1 img,
@@ -322,18 +325,18 @@
     .service-box4 img,
     .service-box5 img {
         top: 55%;
-        left: 55%;
+        left: 60%;
         width: 85px;
         height: 95px;
     }
 
     .service-box4 img {
         top: 55%;
-        left: 55%;
+        left: 60%;
     }
 
     .service-box5 img {
         top: 55%;
-        left: 55%;
+        left: 60%;
     }
 }
