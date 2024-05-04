@@ -11,6 +11,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
+    width: 100%;
 }
 
 .second-role {
@@ -23,28 +24,31 @@
 .service-box1 {
     background-color: var(--color-navy);
     border-radius: 15px;
-    padding: 40px;
+    padding: 30px;
     position: relative;
+    width: 100%;
 }
 
 .service-box2 {
     background: var(--color-blue);
     border-radius: 15px;
-    padding: 40px;
+    padding: 30px;
     position: relative;
+    width: 100%;
 }
 
 .service-box3 {
     background-color: var(--color-navy);
     border-radius: 15px;
-    padding: 40px;
+    padding: 30px;
     position: relative;
+    width: 100%;
 }
 
 .service-box4 {
     background: var(--color-blue);
     border-radius: 15px;
-    padding: 40px;
+    padding: 30px;
     position: relative;
     width: 100%;
 }
@@ -52,7 +56,7 @@
 .service-box5 {
     background-color: var(--color-navy);
     border-radius: 15px;
-    padding: 40px;
+    padding: 30px;
     position: relative;
     width: 100%;
 }
@@ -64,7 +68,7 @@
 .service-box5 h2 {
     font-family: var(--font-family);
     color: #fff;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 48px;
 }
@@ -76,12 +80,12 @@
 .service-box5 p {
     font-family: var(--font-family);
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 34px;
+    line-height: 28px;
     margin-bottom: 3rem;
     z-index: 3;
-    width: 400px;
+    width: 320px;
 }
 
 
@@ -111,23 +115,225 @@
     .service-box3,
     .service-box4,
     .service-box5 {
-        padding: 30px;
+        padding: 28px;
     }
     .service-box1 h2,
     .service-box2 h2,
     .service-box3 h2,
     .service-box4 h2,
     .service-box5 h2 {
-        font-size: 28px;
+        font-size: 22px;
         line-height: 35px;
+        margin-bottom: .5rem;
     }
     .service-box1 p, 
     .service-box2 p,
     .service-box3 p,
     .service-box4 p,
     .service-box5 p {
-        font-size: 16px;
-        line-height: 28px;
-        width: 300px;
+        font-size: 14px;
+        line-height: 23px;
+        width: 230px;
+        margin-bottom: 0rem;
+    }
+    .service-box1 img,
+    .service-box2 img,
+    .service-box3 img,
+    .service-box4 img,
+    .service-box5 img {
+        top: 50%;
+        left: 60%;
+        width: 100px;
+        height: 110px;
+    }
+    .service-box4 img,
+    .service-box5 img {
+        top: 47%;
+        left: 70%;
+    }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+    .first-role {
+        grid-template-columns: 1fr;
+    }
+    .second-role {
+        grid-template-columns: 1fr;
+    }
+    .service-box1 h2,
+    .service-box2 h2,
+    .service-box3 h2,
+    .service-box4 h2,
+    .service-box5 h2 {
+        font-size: 19px;
+        line-height: 35px;
+        margin-bottom: .5rem;
+    }
+    .service-box1 p, 
+    .service-box2 p,
+    .service-box3 p,
+    .service-box4 p,
+    .service-box5 p {
+        font-size: 14px;
+        line-height: 23px;
+        width: 400px;
+        margin-bottom: 1rem;
+    }
+    .service-box1 img,
+    .service-box2 img,
+    .service-box3 img,
+    .service-box4 img,
+    .service-box5 img {
+        top: 48%;
+        left: 80%;
+        width: 85px;
+        height: 95px;
+    }
+    .service-box4 img {
+        top: 43%;
+        left: 80%;
+    }
+    .service-box5 img {
+        top: 47%;
+        left: 80%;
+    }
+}
+
+@media screen and (min-width: 377px) and (max-width: 426px) {
+    .first-role {
+        grid-template-columns: 1fr;
+    }
+    .second-role {
+        grid-template-columns: 1fr;
+    }
+    .service-box1 h2,
+    .service-box2 h2,
+    .service-box3 h2,
+    .service-box4 h2,
+    .service-box5 h2 {
+        font-size: 17px;
+        margin-bottom: .5rem;
+    }
+    .service-box1 p, 
+    .service-box2 p,
+    .service-box3 p,
+    .service-box4 p,
+    .service-box5 p {
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 1rem;
+    }
+    .service-box1 img,
+    .service-box2 img,
+    .service-box3 img,
+    .service-box4 img,
+    .service-box5 img {
+        top: 47%;
+        left: 70%;
+        width: 85px;
+        height: 95px;
+    }
+    .service-box4 img {
+        top: 47%;
+        left: 70%;
+    }
+    .service-box5 img {
+        top: 47%;
+        left: 70%;
+    }
+}
+
+
+@media screen and (min-width: 323px) and (max-width: 376px) {
+    .first-role {
+        grid-template-columns: 1fr;
+    }
+    .second-role {
+        grid-template-columns: 1fr;
+    }
+    .service-box1 h2,
+    .service-box2 h2,
+    .service-box3 h2,
+    .service-box4 h2,
+    .service-box5 h2 {
+        font-size: 17px;
+    }
+
+    .service-box1 p,
+    .service-box2 p,
+    .service-box3 p,
+    .service-box4 p,
+    .service-box5 p {
+        font-size: 12px;
+        line-height: 20px;
+        width: 260px;
+    }
+
+    .service-box1 img,
+    .service-box2 img,
+    .service-box3 img,
+    .service-box4 img,
+    .service-box5 img {
+        top: 50%;
+        left: 65%;
+        width: 85px;
+        height: 95px;
+    }
+
+    .service-box4 img {
+        top: 47%;
+        left: 65%;
+    }
+
+    .service-box5 img {
+        top: 50%;
+        left: 70%;
+    }
+}
+
+@media screen and (max-width: 322px) {
+    .first-role {
+        grid-template-columns: 1fr;
+    }
+    .second-role {
+        grid-template-columns: 1fr;
+    }
+    .service-box1 h2,
+    .service-box2 h2,
+    .service-box3 h2,
+    .service-box4 h2,
+    .service-box5 h2 {
+        font-size: 17px;
+    }
+
+    .service-box1 p,
+    .service-box2 p,
+    .service-box3 p,
+    .service-box4 p,
+    .service-box5 p {
+        font-size: 12px;
+        line-height: 20px;
+        width: 200px;
+    }
+
+    .service-box1 img,
+    .service-box2 img,
+    .service-box3 img,
+    .service-box4 img,
+    .service-box5 img {
+        top: 55%;
+        left: 55%;
+        width: 85px;
+        height: 95px;
+    }
+
+    .service-box4 img {
+        top: 55%;
+        left: 55%;
+    }
+
+    .service-box5 img {
+        top: 55%;
+        left: 55%;
     }
 }

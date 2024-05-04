@@ -27,12 +27,12 @@
 }
 
 .header-text {
-    margin-right: 3rem;
+    margin-right: 4rem;
 }
 
 .header-text h1 {
     font-family: var(--font-family);
-    font-size: 52px;
+    font-size: 45px;
     font-weight: 650;
     line-height: 80px;
     margin-bottom: 2rem;
@@ -40,7 +40,7 @@
 
 .header-text p {
     font-family: var(--font-family);
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     line-height: 40px;
     margin-bottom: 2rem;
@@ -78,9 +78,9 @@
 }
 
 .header-bar p {
-    font-family: var(--font-base);
+    font-family: var(--font-family);
     color: #fff;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 600;
     line-height: 52px;
     padding: 30px 0;
@@ -113,6 +113,7 @@
 
     .header-text p {
         line-height: 28px;
+        width: 500px;
     }
     .header-bar {
         top: 500px;
@@ -147,6 +148,7 @@
     .header-text p {
         font-size: 16px;
         line-height: 22px;
+        width: 300px;
     }
     .header-bar {
         top: 400px;
@@ -201,9 +203,16 @@
     .header-text {
         margin-left: 2rem;
     }
+    .header-text button {
+        margin-bottom: 0rem;
+    }
 }
 
 @media screen and (max-width: 321px) {
+    .header-img img {
+        width: 300px;
+        top: -500px;
+    }
     .header-text {
         margin-left: 4rem;
     }
