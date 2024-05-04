@@ -1,4 +1,133 @@
-.service-box img {
+.service{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.first-role {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.second-role {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+}
+
+.service-box1 {
+    background-color: var(--color-navy);
+    border-radius: 15px;
+    padding: 40px;
+    position: relative;
+}
+
+.service-box2 {
+    background: var(--color-blue);
+    border-radius: 15px;
+    padding: 40px;
+    position: relative;
+}
+
+.service-box3 {
+    background-color: var(--color-navy);
+    border-radius: 15px;
+    padding: 40px;
+    position: relative;
+}
+
+.service-box4 {
+    background: var(--color-blue);
+    border-radius: 15px;
+    padding: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.service-box5 {
+    background-color: var(--color-navy);
+    border-radius: 15px;
+    padding: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.service-box1 h2,
+.service-box2 h2,
+.service-box3 h2,
+.service-box4 h2,
+.service-box5 h2 {
+    font-family: var(--font-family);
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.service-box1 p, 
+.service-box2 p,
+.service-box3 p,
+.service-box4 p,
+.service-box5 p {
+    font-family: var(--font-family);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    margin-bottom: 3rem;
+    z-index: 3;
+    width: 400px;
+}
+
+
+.service-box1 img,
+.service-box2 img,
+.service-box3 img,
+.service-box4 img,
+.service-box5 img {
     width: 121px;
     height: 132px;
+    position: absolute;
+    z-index: 1;
+    top: 55%;
+    left: 65%;
+    opacity: 0.3;
+}
+
+.service-box4 img,
+.service-box5 img {
+    top: 55%;
+    left: 78%;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1025px) {
+    .service-box1,
+    .service-box2,
+    .service-box3,
+    .service-box4,
+    .service-box5 {
+        padding: 30px;
+    }
+    .service-box1 h2,
+    .service-box2 h2,
+    .service-box3 h2,
+    .service-box4 h2,
+    .service-box5 h2 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .service-box1 p, 
+    .service-box2 p,
+    .service-box3 p,
+    .service-box4 p,
+    .service-box5 p {
+        font-size: 16px;
+        line-height: 28px;
+        width: 300px;
+    }
 }
