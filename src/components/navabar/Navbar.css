@@ -1,25 +1,214 @@
 .navbar {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.navbar-links {
-    flex: 1;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    list-style: none;
 }
 
 .navbar-links_logo {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 20px;
 }
+
+.navbar-links_container {
+    display: flex;
+    justify-content: right;
+    align-self: center;
+}
+
+.navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
 
 .navbar-links_logo img {
     width: 100px;
     height: 86px;
+    padding: 10px;
+}
+
+.navbar-links_container ul li {
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 1rem;
+}
+
+.navbar-links_container ul li a:hover {
+    color: var(--color-blue);
+}
+
+
+.navbar-download {
+    margin: .5rem;
+    margin-right: 2rem;
+}
+
+.navbar-download button {
+    border-radius:50px;
+    padding: 10px 20px;
+    border: 2px solid var(--color-blue);
+    color: var(--color-blue);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.navbar-download button:hover {
+    background-color: var(--color-blue);
+    color: #fff;
+}
+
+.navbar-menu {
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.navbar-menu svg {
+    margin-right: 1rem;
+}
+
+.navbar-menu_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-blue);
+    transition: 0.5s ease;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.navbar-menu_container .container_close {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar-menu_container-links {
+    margin: 7rem;
+    list-style: none;
+}
+
+.navbar-menu-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navbar-menu-links li {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: var(--font-family);
+}
+
+.navbar-menu-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-menu-download button {
+    border-radius:50px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    color: white;
+    background-color: var(--color-blue);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+@media screen and(min-width: 2000px) {
+    .navbar-links_logo img {
+        width: 210px;
+    }
+
+    .navbar-menu-downlaod {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .navbar-menu {
+        display: none;
+    }
+    .navbar-download {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 1015px) {
+    .navbar-links {
+        display: none;
+    }
+    .navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-downlaod {
+        display: flex;
+    }
+
+    .navbar-menu {
+        display: flex;
+    }
+
+    .navbar-menu-links li {
+        font-size: 1.5rem;
+    }
+
+    .navbar-menu-downlaod {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .navbar-download {
+        display: none;
+    }
+
+    .navbar-menu-downlaod {
+        display: flex;
+    }
+    .navbar-links_logo img {
+        width: 80px;
+        height: 68px;
+        padding: 5px;
+    }
 }
