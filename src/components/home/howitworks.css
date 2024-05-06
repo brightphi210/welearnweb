@@ -113,7 +113,7 @@
         padding: 10px;
         background: var(--color-blue);
         border-radius: 50%;
-        color: #fff;
+        color: var(--color-white);
         margin-bottom: 1rem;
     }
     .howitworks-img {
@@ -148,7 +148,7 @@
         padding: 10px;
         background: var(--color-blue);
         border-radius: 50%;
-        color: #fff;
+        color: var(--color-white);
         margin-bottom: 1rem;
     }
     .hit-header h2 {
@@ -189,7 +189,7 @@
         padding: 10px;
         background: var(--color-blue);
         border-radius: 50%;
-        color: #fff;
+        color: var(--color-white);
         margin-bottom: 1rem;
     }
     .hit-header h2 {
@@ -230,7 +230,7 @@
         padding: 10px;
         background: var(--color-blue);
         border-radius: 50%;
-        color: #fff;
+        color: var(--color-white);
         margin-bottom: 1rem;
     }
     .hit-header h2 {
