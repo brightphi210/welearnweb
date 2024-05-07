@@ -435,7 +435,7 @@
     }
 }
 
-@media screen and (max-width: 322px) {
+@media screen and (max-width: 320px) {
     .footer-download {
         padding: 2rem;
     }

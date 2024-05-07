@@ -144,7 +144,7 @@
         margin-right: 2rem;
     }
     .header-text h1 {
-        font-size: 30px;
+        font-size: 35px;
         line-height: 45px;
     }
     .header-text p {
@@ -181,7 +181,7 @@
         top: -100px;
     }
     .header-text h1 {
-        font-size: 30px;
+        font-size: 35px;
         line-height: 40px;
     }
     .header-text p {
@@ -214,8 +214,8 @@
         top: -100px;
     }
     .header-text h1 {
-        font-size: 22px;
-        line-height: 33px;
+        font-size: 30px;
+        line-height: 40px;
         font-weight: 700;
         margin-top: 3rem;
         margin-bottom: .7rem;
@@ -283,7 +283,7 @@
         margin-left: 10rem;
     }
 
-        .header-img {
+    .header-img {
         margin-left: 0;
     }
 }
