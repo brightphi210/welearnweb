@@ -254,7 +254,7 @@
         flex-direction: column-reverse;
     }
     .space {
-        margin: 16rem;
+        margin: 15rem;
     }
     .header-text h1 {
         font-size: 32px;
@@ -268,9 +268,9 @@
     }
     .header-img img {
         position: absolute;
-        padding-left: 4rem;
+        padding-left: 3rem;
         width: 350px;
-        top: -200px;
+        top: -240px;
         mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
         -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
     }
