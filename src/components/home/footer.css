@@ -137,7 +137,7 @@
         font-size: 40px;
         font-weight: 600;
         line-height: 45px;
-        width: 350px;
+        width: fit-content;
     }
     .text-buttons button {
         width: 130px;
@@ -311,6 +311,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: fit-content;
     }
     .footer-main-text img {
         display: flex;
@@ -388,6 +389,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: fit-content;
     }
     .footer-main-text img {
         display: flex;
@@ -434,7 +436,7 @@
     }
 }
 
-@media screen and (max-width: 322px) {
+@media screen and (max-width: 320px) {
     .footer-download {
         padding: 2rem;
     }
