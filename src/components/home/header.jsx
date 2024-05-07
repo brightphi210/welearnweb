@@ -10,6 +10,7 @@ export const Header = () => {
     <div className='header section__padding'>
       <div className="header-content">
         <div className="header-text">
+          <div className="space"></div>
           <h1>
             <span className='span'>Welearn</span> Empowers <br/> Your Child's <span className="span">Education</span>  
           </h1>

@@ -11,6 +11,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* position: absolute; */
+    z-index: 3;
 }
 
 .header-img {
@@ -20,14 +22,17 @@
 }
 
 .header-img img {
+    /* position: absolute; */
+    z-index: 1;
     width: 460px;
-    top: -60px;
+    top: -300px;
     mask-image: linear-gradient(to top, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0));
     -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0));
 }
 
 .header-text {
     margin-right: 6rem;
+    /* position: absolute; */
 }
 
 .header-text h1 {
@@ -36,6 +41,7 @@
     font-weight: 700;
     line-height: 80px;
     margin-bottom: 2rem;
+    z-index: 2;
 }
 
 .header-text p {
@@ -45,6 +51,7 @@
     font-weight: 500;
     line-height: 40px;
     margin-bottom: 2rem;
+    z-index: 2;
 }
 
 .header-text button {
@@ -59,6 +66,7 @@
     cursor: pointer;
     gap: 10px;
     border: none;
+    z-index: 2;
 }
 
 .header-text button:hover {
@@ -208,13 +216,29 @@
     }
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (min-width: 323px) and (max-width: 470px) {
     .header-content {
         flex-direction: column-reverse;
     }
+    .space {
+        margin: 17rem;
+    }
+    .header-text h1 {
+        font-size: 33px;
+        line-height: 40px;
+    }
+    .header-text p {
+        font-size: 16px;
+        line-height: 22px;
+        width: 350px;
+    }
     .header-img img {
+        position: absolute;
         width: 330px;
-        top: -500px;
+        top: -250px;
+        z-index: 1;
+        mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
+        -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
     }
     .header-bar {
         background: var(--color-navy);
@@ -229,9 +253,26 @@
 }
 
 @media screen and (max-width: 321px) {
+    .space {
+        margin: 15rem;
+    }
+    .header-text h1 {
+        font-size: 32px;
+        line-height: 40px;
+        width: 310px;
+    }
+    .header-text p {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        width: 310px;
+    }
     .header-img img {
-        width: 300px;
-        top: -500px;
+        position: absolute;
+        width: 280px;
+        top: -220px;
+        mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
+        -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
     }
     .header-text {
         margin-left: 4rem;
