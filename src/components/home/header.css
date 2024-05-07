@@ -259,18 +259,18 @@
     .header-text h1 {
         font-size: 32px;
         line-height: 40px;
-        padding-left: 2rem;
+        padding-left: 1.5rem;
     }
     .header-text p {
         font-size: 16px;
         line-height: 22px;
-        width: 320px;
-        padding-left: 2rem;
+        width: 330px;
+        padding-left: 1.5rem;
     }
     .header-img img {
         position: absolute;
         padding-left: 4rem;
-        width: 310px;
+        width: 320px;
         top: -200px;
         mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
         -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
@@ -284,7 +284,7 @@
     }
     .header-text button {
         margin-bottom: 0rem;
-        margin-left: 2rem;
+        margin-left: 1.5rem;
     }
 
         .header-img {
