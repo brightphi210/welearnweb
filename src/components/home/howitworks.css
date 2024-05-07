@@ -142,7 +142,7 @@
         align-items: flex-start;
         border: none;
         padding: 0;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
     }
     .hit-content svg {
         width: 40px;
@@ -184,7 +184,7 @@
         align-items: flex-start;
         border: none;
         padding: 0;
-        margin-bottom: 0;
+        margin-bottom: .5rem;
     }
     .hit-content svg {
         width: 40px;
@@ -226,7 +226,7 @@
         align-items: flex-start;
         border: none;
         padding: 0;
-        margin-bottom: 0;
+        margin-bottom: .5rem;
     }
     .hit-content svg {
         width: 40px;

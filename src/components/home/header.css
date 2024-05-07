@@ -254,12 +254,13 @@
         flex-direction: column-reverse;
     }
     .space {
-        margin: 12rem;
+        margin: 14rem;
     }
     .header-text h1 {
         font-size: 32px;
         line-height: 40px;
         padding-left: 1.5rem;
+        width: 330px;
     }
     .header-text p {
         font-size: 16px;
@@ -270,7 +271,7 @@
     .header-img img {
         position: absolute;
         padding-left: 4rem;
-        width: 320px;
+        width: 330px;
         top: -200px;
         mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
         -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
