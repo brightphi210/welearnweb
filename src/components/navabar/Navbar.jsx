@@ -19,11 +19,11 @@ export const Navbar = () => {
       <div className='navbar-links_container'>
         <ul className="navbar-links">
           <li className='active'><NavLink to="/">Home</NavLink></li>
-          <li className='active'><NavLink to="/">Find A Tutor</NavLink></li>
+          {/* <li className='active'><NavLink to="/">Find A Tutor</NavLink></li>
           <li className='active'><NavLink to="#howitworks">How It Works</NavLink></li>
           <li className='active'><NavLink to="#testimonials">Testimonials</NavLink></li>
-          <li className='active'><NavLink to="/">About Us</NavLink></li>
-          <li className='active'><NavLink to="/">Contact Us</NavLink></li>
+          <li className='active'><NavLink to="/">About Us</NavLink></li> */}
+          {/* <li className='active'><NavLink to="/">Contact Us</NavLink></li> */}
         </ul>          
         <div className="navbar-download">
             <button>Download App</button>
@@ -37,11 +37,11 @@ export const Navbar = () => {
               <div className='navbar-menu_container-links'>
                 <ul className="navbar-menu-links">
                   <li><NavLink to="/">Home</NavLink></li>
-                  <li><NavLink to="/">Find A Tutor</NavLink></li>
+                  {/* <li><NavLink to="/">Find A Tutor</NavLink></li>
                   <li><NavLink to="#howitworks">How It Works</NavLink></li>
                   <li><NavLink to="#testimonials">Testimonials</NavLink></li>
                   <li><NavLink to="/">About Us</NavLink></li>
-                  <li><NavLink to="/">Contact Us</NavLink></li>
+                  <li><NavLink to="/">Contact Us</NavLink></li> */}
                 </ul>
                 <div className="navbar-menu-download">
                   <button>Download App</button>
