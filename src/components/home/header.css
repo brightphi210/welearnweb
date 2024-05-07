@@ -254,24 +254,24 @@
         flex-direction: column-reverse;
     }
     .space {
-        margin: 14rem;
+        margin: 15rem;
     }
     .header-text h1 {
         font-size: 32px;
         line-height: 40px;
-        padding-left: 1.5rem;
+        padding-left: .7rem;
         width: 330px;
     }
     .header-text p {
         font-size: 16px;
         line-height: 22px;
         width: 330px;
-        padding-left: 1.5rem;
+        padding-left: .7rem;
     }
     .header-img img {
         position: absolute;
         padding-left: 4rem;
-        width: 330px;
+        width: 340px;
         top: -200px;
         mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
         -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1));
@@ -285,7 +285,7 @@
     }
     .header-text button {
         margin-bottom: 0rem;
-        margin-left: 1.5rem;
+        margin-left: .7rem;
     }
 
         .header-img {
