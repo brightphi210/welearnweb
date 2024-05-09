@@ -25,7 +25,7 @@ export const Testimonials = () => {
 
     return (
         <div className='small__section section__padding'>
-            <div className='container'>
+            <div className='container' id='testimonials'>
                 <div className='testimonials__head'>
                     <h2>Testimonials</h2>
                     <p>Don’t just take our words for it- here’s what members love about Welearn</p>
