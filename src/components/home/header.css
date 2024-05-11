@@ -9,7 +9,7 @@
 
 .header-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     /* position: absolute; */
     z-index: 3;
@@ -17,13 +17,12 @@
 
 .header-img {
     position: relative;
-    width: 100%;
     margin-left: 3rem;
 }
 
 .header-img img {
     /* position: absolute; */
-    z-index: 1;
+    z-index: -1;
     width: 460px;
     top: -300px;
     mask-image: linear-gradient(to top, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0));
