@@ -7,12 +7,22 @@ import { ParentsPage } from './pages/ParentsPage';
 import { TutorsPage } from './pages/TutorsPage';
 import { AdminPage } from './pages/AdminPage';
 
+
+//fonts
+
+import "./fonts/Sherika Black.ttf"
+import "./fonts/Sherika Bold.ttf"
+import "./fonts/Sherika Medium.ttf"
+import "./fonts/Sherika Regular.ttf"
+import "./fonts/Sherika Light.ttf"
+
+
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path={'/login'} element= {<LoginPage/>} />
+          <Route path={'/'} element= {<LoginPage/>} />
           <Route path={"/dashboard"} element={<DashboardPage/>} />
           <Route path={'/parents'} element={<ParentsPage/>} />
           <Route path={'/tutors'} element={<TutorsPage/>} />
