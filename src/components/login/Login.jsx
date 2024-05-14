@@ -8,7 +8,7 @@ export const Login = () => {
     <div className={"loginbox"}>
       <div className={"login"}>
       <img src={WeLearn} alt='' className={"logo"}/>
-      <h1 className={"txt2"}>Hello Admin </h1>
+      <h1 className={"txt2"}>Hello, Admin </h1>
       </div>
     </div>
   )

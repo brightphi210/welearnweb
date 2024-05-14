@@ -6,8 +6,8 @@
   align-items: center;
 }
 .login{
-  width: 300;
-  height: 400;
+  width: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -15,7 +15,7 @@
   align-items: center;
 }
 .logo{
-  width: 150px;
+  width: 100px;
 }
 .txt2{
   font-weight: 700;

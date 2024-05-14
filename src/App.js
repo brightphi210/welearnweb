@@ -9,12 +9,10 @@ import { AdminPage } from './pages/AdminPage';
 
 
 //fonts
-
-import "./fonts/Sherika Black.ttf"
-import "./fonts/Sherika Bold.ttf"
-import "./fonts/Sherika Medium.ttf"
-import "./fonts/Sherika Regular.ttf"
-import "./fonts/Sherika Light.ttf"
+import "./fonts/AvenirNextLTPro-Bold.otf"
+import "./fonts/AvenirNextLTPro-Regular.otf"
+import "./fonts/AvenirNextLTPro-MediumIt.otf"
+import "./fonts/AvenirNextLTPro-HeavyIt.otf"
 
 
 function App() {

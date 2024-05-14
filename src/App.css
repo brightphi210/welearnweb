@@ -1,12 +1,14 @@
 @font-face {
-  font-family: 'sherika';
+  font-family: 'AvenirNextLTPro';
+  font-weight: bold;
+  font-style: normal;
 }
 
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'sherika';
+  font-family: 'AvenirNextLTPro';
 }
 
 a{
