@@ -11,8 +11,7 @@ import { AdminPage } from './pages/AdminPage';
 //fonts
 import "./fonts/AvenirNextLTPro-Bold.otf"
 import "./fonts/AvenirNextLTPro-Regular.otf"
-import "./fonts/AvenirNextLTPro-MediumIt.otf"
-import "./fonts/AvenirNextLTPro-HeavyIt.otf"
+import "./fonts/AvenirNextLTPro-Demi.otf"
 
 
 function App() {

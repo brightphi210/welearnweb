@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'AvenirNextLTPro';
-  font-weight: bold;
+  src: url('./fonts/AvenirNextLTPro-Demi.otf') format('opentype');
   font-style: normal;
 }
 
@@ -8,9 +8,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'AvenirNextLTPro';
+  font-family: 'AvenirNextLTPro', sans-serif;
 }
 
 a{
   text-decoration: none;
+}
+
+.dashBody{
+  display: flex;
+}
+.dashboardbox{
+  display: flex;
+  flex-direction: column;
 }
