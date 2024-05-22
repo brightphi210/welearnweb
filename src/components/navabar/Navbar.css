@@ -96,7 +96,7 @@
 
 .navbar-menu_container .container_close {
     font-size: 24px;
-    /* color: var(--color-white); */
+    color: var(--color-white);
     cursor: pointer;
     transition: 0.5s ease;
     position: absolute;
@@ -201,6 +201,8 @@
 
     .navbar-menu-links li {
         font-size: 1.5rem;
+        font-size: 15px;
+
     }
 
     .navbar-menu-downlaod {
@@ -232,9 +234,12 @@
     .navbar-menu_container-links {
         margin: 4rem;
         list-style: none;
+        font-size: 13px;
+
     }
     .navbar-menu-links li {
         margin-bottom: 1rem;
+        font-size: 15px;
     }
     .navbar-menu svg {
         margin-right: 0;
