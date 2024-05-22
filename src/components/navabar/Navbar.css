@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .navbar-links_logo {
@@ -62,6 +63,7 @@
     line-height: 28px;
     cursor: pointer;
     gap: 10px;
+    background: var(--color-white);
 }
 
 .navbar-download button:hover {
@@ -209,9 +211,14 @@
     .navbar-download {
         display: none;
     }
-
     .navbar-menu-downlaod {
         display: flex;
+    }
+    .navbar-links_logo {
+        padding-left: 5px;
+    }
+    .navbar-menu svg {
+        margin-right: .5rem;
     }
     .navbar-links_logo img {
         width: 80px;

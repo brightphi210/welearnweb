@@ -9,25 +9,29 @@
 
 .header-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    /* position: absolute; */
+    z-index: 3;
 }
 
 .header-img {
     position: relative;
-    width: 100%;
     margin-left: 3rem;
 }
 
 .header-img img {
+    /* position: absolute; */
+    z-index: -1;
     width: 460px;
-    top: -60px;
+    top: -300px;
     mask-image: linear-gradient(to top, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0));
     -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0));
 }
 
 .header-text {
     margin-right: 6rem;
+    /* position: absolute; */
 }
 
 .header-text h1 {
@@ -36,6 +40,7 @@
     font-weight: 700;
     line-height: 80px;
     margin-bottom: 2rem;
+    z-index: 2;
 }
 
 .header-text p {
@@ -45,6 +50,7 @@
     font-weight: 500;
     line-height: 40px;
     margin-bottom: 2rem;
+    z-index: 2;
 }
 
 .header-text button {
@@ -59,6 +65,7 @@
     cursor: pointer;
     gap: 10px;
     border: none;
+    z-index: 2;
 }
 
 .header-text button:hover {
@@ -234,27 +241,38 @@
         font-size: 24px;
         padding: 16px 0;
     }
-
-
     .header-img {
         margin-left: 0;
     }
 }
 
-/* . */
 @media screen and (min-width: 320px) and (max-width: 426px) {  
     .header-content {
         flex-direction: column-reverse;
     }
+    .space {
+        margin: 15rem;
+    }
+    .header-text h1 {
+        font-size: 32px;
+        line-height: 40px;
+        width: 330px;
+    }
+    .header-text p {
+        font-size: 16px;
+        line-height: 22px;
+        width: 330px;
+    }
     .header-img img {
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        top: -500px;
+        position: absolute;
+        padding-left: 1.5rem;
+        width: 370px;
+        top: -300px;
+        mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 1) 65%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 1) 65%);
     }
     .header-bar {
-        background: var(--color-navy);
+        background: var(--color-blue);
         top: 670px;
     }
     .header-text {
@@ -270,12 +288,27 @@
 }
 
 @media screen and (max-width: 321px) {
+    .space {
+        margin: 12rem;
+    }
+    .header-text h1 {
+        font-size: 32px;
+        line-height: 40px;
+        width: 310px;
+    }
+    .header-text p {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        width: 310px;
+    }
     .header-img img {
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        top: -500px;
+        position: absolute;
+        padding-left: 4rem;
+        width: 310px;
+        top: -200px;
+        mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 1) 65%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 1) 65%);
     }
     .header-text {
         margin-left: 4rem;

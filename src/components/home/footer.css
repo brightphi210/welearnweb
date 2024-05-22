@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .footer-download {
@@ -125,6 +125,7 @@
     color: #555555;
     font-size: 16px;
     font-weight: 400;
+    font-family: var(--font-family);
 }
 
 .lower-logo img {
@@ -261,7 +262,7 @@
     }
 }
 
-@media screen and (min-width: 377px) and (max-width: 426px) {  
+@media screen and (min-width: 377px) and (max-width: 427px) {  
     .footer-download {
         padding: 2rem;
     }

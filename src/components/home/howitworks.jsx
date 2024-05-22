@@ -8,7 +8,7 @@ import AppImg from '../media/App.png';
 
 export const Howitworks = () => {
   return (
-    <div className='howitworks section__padding'>
+    <div className='howitworks section__padding' id='howitworks'>
       <div className="howitworks-img">
         <img src={AppImg} alt="app" />
       </div>

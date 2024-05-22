@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link , NavLink} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { CgMenuLeft } from "react-icons/cg";
 import { IoCloseCircle } from "react-icons/io5";
 
@@ -8,7 +8,10 @@ import './Navbar.css'
 
 export const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-
+  
+  // const handleClose = () => {
+  //   setToggleMenu((prev) => !prev)
+  // }
   return (
     <div className='navbar'>
       <div className="navbar-links_logo">
@@ -18,15 +21,14 @@ export const Navbar = () => {
       </div>
       <div className='navbar-links_container'>
         <ul className="navbar-links">
-          <li className='active'><NavLink to="/">Home</NavLink></li>
-          {/* <li className='active'><NavLink to="/">Find A Tutor</NavLink></li>
-          <li className='active'><NavLink to="#howitworks">How It Works</NavLink></li>
-          <li className='active'><NavLink to="#testimonials">Testimonials</NavLink></li>
-          <li className='active'><NavLink to="/">About Us</NavLink></li> */}
-          {/* <li className='active'><NavLink to="/">Contact Us</NavLink></li> */}
+          <li className='active'><Link to="/">Home</Link></li>
+          <li className='active'><a href="#service">Why Use Welearn</a></li>
+          <li className='active'><a href="#howitworks">How It Works</a></li>
+          <li className='active'><a href="#testimonials">Testimonials</a></li>
+          <li className='active'><a href="#waitlist">Waitlist</a></li>
         </ul>          
         <div className="navbar-download">
-            <button>Download App</button>
+            <button><Link to="/">Download App</Link></button>
           </div>
         <div className="navbar-menu">
           <CgMenuLeft color='#00262F' fontSize={35} onClick={() => setToggleMenu(true)} />
@@ -36,15 +38,14 @@ export const Navbar = () => {
               <IoCloseCircle color='#00262F' className='container_close' fontSize={50} onClick={() => setToggleMenu(false)} />
               <div className='navbar-menu_container-links'>
                 <ul className="navbar-menu-links">
-                  <li><NavLink to="/">Home</NavLink></li>
-                  {/* <li><NavLink to="/">Find A Tutor</NavLink></li>
-                  <li><NavLink to="#howitworks">How It Works</NavLink></li>
-                  <li><NavLink to="#testimonials">Testimonials</NavLink></li>
-                  <li><NavLink to="/">About Us</NavLink></li>
-                  <li><NavLink to="/">Contact Us</NavLink></li> */}
+                  <li><Link to="/">Home</Link></li>
+                  <li className='active'><a href="#service">Why Use Welearn</a></li>
+                  <li className='active'><a href="#howitworks">How It Works</a></li>
+                  <li className='active'><a href="#testimonials">Testimonials</a></li>
+                  <li className='active'><a href="#waitlist">Waitlist</a></li>
                 </ul>
                 <div className="navbar-menu-download">
-                  <button>Download App</button>
+                  <button><Link to="/">Download App</Link></button>
                 </div>            
               </div>
             </div>
