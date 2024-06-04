@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { GrHomeRounded } from "react-icons/gr";
 import { BsPeople } from "react-icons/bs";
 import { IoPerson } from "react-icons/io5";
-
+import { LuLogOut } from "react-icons/lu";
 
 
 export const Sidebar = () => {
@@ -65,7 +65,7 @@ export const Sidebar = () => {
             box1:defaultStyles,
             box2:defaultStyles,
             box3:defaultStyles,
-            box4:activeStlyes,
+            box4:defaultStyles,
           })
         }
     }
@@ -112,18 +112,29 @@ export const Sidebar = () => {
       </div>
       </Link>
       </div>
-      </div>
-
       <div>
         <div className={'admin'} > 
-        <div >
-          <img src={""}  alt=''/>
+        <Link to={'/'+'admin'}>
+        <div className={"adminsec1"}>
+        <div>
+          <img src={LOGO}  alt=''/>
         </div>
+        <div onClick={()=>{
+          setActive('box4')
+        }}
+        style={buttonStyles.box4}
+        >
         <p>Administrator</p>
         <p>@admin</p>
         </div>
+        </div>
+        </Link>
+        <div>
+        <LuLogOut/>
+        </div>
+        </div>
       </div>
-      
+      </div>     
     </div>
   )
 }
