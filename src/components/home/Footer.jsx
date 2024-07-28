@@ -8,6 +8,7 @@ import './footer.css';
 import Logo from '../media/WELEARN png.png'
 import AppImg from '../media/App.png';
 import Playstore from '../media/Playstore.png';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -33,7 +34,9 @@ export const Footer = () => {
             <div className='footer-main-lower'>
                 <div className="lower-links">
                     <ul>
-                        <li><FaFacebook color='var(--color-white)' /></li>
+                        <Link to={'https://www.facebook.com/profile.php?id=61563059705724&mibextid=ZbWKwL'}>
+                            <li><FaFacebook color='var(--color-white)' /></li>
+                        </Link>
                         <li><FaXTwitter color='var(--color-white)' /></li>
                         <li><FaInstagram color='var(--color-white)' /></li>
                         <li><FaLinkedinIn color='var(--color-white)' /></li>
