@@ -13,12 +13,12 @@ export const Home = () => {
     <div>
       <Navbar/>
       <Header />
-      <About />
+      {/* <About />
       <Service />
       <Howitworks />
       <Testimonials />
       <Waitlist />
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }

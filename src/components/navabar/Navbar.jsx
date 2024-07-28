@@ -19,14 +19,7 @@ export const Navbar = () => {
           <img src={Logo} alt="logo" />
         </Link>
       </div>
-      <div className='navbar-links_container'>
-        <ul className="navbar-links">
-          <li className='active'><Link to="/">Home</Link></li>
-          <li className='active'><a href="#service">Why Use Welearn</a></li>
-          <li className='active'><a href="#howitworks">How It Works</a></li>
-          <li className='active'><a href="#testimonials">Testimonials</a></li>
-          <li className='active'><a href="#waitlist">Waitlist</a></li>
-        </ul>          
+      <div className='navbar-links_container'>     
         <div className="navbar-download">
             <button><Link to="/">Download App</Link></button>
           </div>

@@ -5,6 +5,8 @@
     align-items: center;
     width: 100%;
     gap: 15px;
+    padding: 50px 10rem;
+    padding-top: 80px;
 }
 
 .first-role {

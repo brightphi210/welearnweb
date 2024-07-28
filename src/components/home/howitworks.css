@@ -1,8 +1,9 @@
 .howitworks {
-    padding-top: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5px 10rem;
+    padding-top: 6rem;
 }
 
 .howitworks-img {
