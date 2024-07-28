@@ -14,11 +14,11 @@ export const Home = () => {
       <Navbar/>
       <Header />
       <About />
-      {/* <Service />
+      <Service />
       <Howitworks />
       <Testimonials />
       <Waitlist />
-      <Footer /> */}
+      <Footer />
     </div>
   )
 }

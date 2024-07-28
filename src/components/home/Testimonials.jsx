@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 
-import "./Testimonials.scss";
+import "./Testimonials.css";
 import dummyTestimonials from '../home/testimonial';
 
 export const Testimonials = () => {
