@@ -13,8 +13,8 @@ export const Home = () => {
     <div>
       <Navbar/>
       <Header />
-      {/* <About />
-      <Service />
+      <About />
+      {/* <Service />
       <Howitworks />
       <Testimonials />
       <Waitlist />

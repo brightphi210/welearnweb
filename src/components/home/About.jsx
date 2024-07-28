@@ -18,8 +18,8 @@ export const About = () => {
                     <p>At WeLearn, we're dedicated to revolutionizing the way students learn and grow. Our platform is designed to connect passionate tutors with eager learners, fostering a dynamic environment where knowledge flourishes and potential is unleashed.<br/>
                     With a commitment to quality education, WeLearn offers a diverse range of subjects and specialized tutors to cater to every learning need. Whether it's mastering mathematics, delving into literature, or exploring new languages, we have the expertise to guide students toward academic success.<br/>
                     Join us at WeLearn and embark on a transformative educational experience. Together, let's unlock the power of learning and inspire a brighter future. Welcome to WeLearn!</p>
-                    <img src={Arrowup} alt="arrowup" />
-                    <img src={Arrowdown} alt="arrowdown" />
+                    <img src={Arrowup} alt="arrowup"  className='break'/>
+                    <img src={Arrowdown} alt="arrowdown"  className='break'/>
                 </div>
             </div>
             <div className="about-lower">
