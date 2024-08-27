@@ -1,0 +1,254 @@
+.dashboard__navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  padding: 0.8rem 2rem;
+  width: calc(100vw - 272px);
+  background-color: #fcfcfc;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+.navbar__close svg {
+  display: none;
+}
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.navbar__design {
+  width: 1px;
+  height: 30px;
+  background-color: #e4e7ec;
+}
+.navbar__notification-container {
+  position: relative;
+}
+.navbar__notification-container svg {
+  fill: #667185;
+  width: 27px;
+  height: 27px;
+}
+.navbar__notification-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: -30%;
+  right: -10%;
+
+  padding: 5px 7.5px;
+  border-radius: 50%;
+  border: none;
+  font-size: 9px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #00c0ea;
+}
+.navbar__user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ccf2fb;
+}
+.navbar__user svg {
+  fill: #00c0ea;
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 322px) {
+  .dashboard__navbar {
+    position: fixed;
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar__close svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+    fill: #00c0ea;
+  }
+  .navbar__notification-container svg {
+    fill: #667185;
+    width: 21px;
+    height: 21px;
+  }
+  .navbar__user svg {
+    fill: #00c0ea;
+    width: 21px;
+    height: 21px;
+  }
+  .navbar__notification-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: -20%;
+    right: -10%;
+
+    padding: 4px 6px;
+    border-radius: 50%;
+    border: none;
+    font-size: 8px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #00c0ea;
+  }
+  .navbar__user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccf2fb;
+  }
+  .dashboard__navbar {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 323px) and (max-width: 376px) {
+  .dashboard__navbar {
+    position: fixed;
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar__close svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+    fill: #00c0ea;
+  }
+  .navbar__notification-container svg {
+    fill: #667185;
+    width: 23px;
+    height: 23px;
+  }
+  .navbar__user svg {
+    fill: #00c0ea;
+    width: 23px;
+    height: 23px;
+  }
+  .navbar__notification-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: -20%;
+    right: -10%;
+
+    padding: 4px 6px;
+    border-radius: 50%;
+    border: none;
+    font-size: 8px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #00c0ea;
+  }
+  .navbar__user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccf2fb;
+  }
+  .dashboard__navbar {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 426px) {
+  .dashboard__navbar {
+    position: fixed;
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar__close svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+    fill: #00c0ea;
+  }
+  .navbar__notification-container svg {
+    fill: #667185;
+    width: 25px;
+    height: 25px;
+  }
+  .navbar__user svg {
+    fill: #00c0ea;
+    width: 24px;
+    height: 24px;
+  }
+  .navbar__notification-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: -20%;
+    right: -10%;
+
+    padding: 4px 6px;
+    border-radius: 50%;
+    border: none;
+    font-size: 8px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #00c0ea;
+  }
+  .dashboard__navbar {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .dashboard__navbar {
+    position: fixed;
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar__close svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+    fill: #00c0ea;
+  }
+  .dashboard__navbar {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .dashboard__navbar {
+    width: calc(100vw - 250px);
+  }
+
+  .navbar__notification-container svg {
+    fill: #667185;
+    width: 25px;
+    height: 25px;
+  }
+
+  .navbar__user svg {
+    fill: #00c0ea;
+    width: 23px;
+    height: 23px;
+  }
+}

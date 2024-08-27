@@ -1,0 +1,233 @@
+.sidebar {
+  background-color: #fcfcfc;
+  width: 272px;
+  height: 100%;
+  transition: 0.3s ease;
+}
+.sidebar__close {
+  left: -50%;
+}
+.sidebar__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 1.2rem 0.5rem 1.2rem;
+  height: 100%;
+}
+.sidebar__logo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.sidebar__logo svg {
+  display: none;
+  stroke: #fff;
+  height: 24px;
+  width: 24px;
+}
+.sidebar__items {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  height: 100%;
+}
+.sidebar__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+
+  width: 100%;
+}
+.sidebar-link {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+
+  font-weight: 600;
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 5px;
+  color: #0f0f0f;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+}
+.sidebar-link svg {
+  width: 22px;
+  height: 22px;
+}
+.sidebar-link span {
+  font-size: 1rem;
+}
+.sidebar-link.active {
+  background-color: #00c0ea;
+  color: #fcfcfc;
+}
+.sidebar-link.active svg {
+  stroke: #fcfcfc;
+  fill: #fcfcfc;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 0.5rem 0 1rem;
+  cursor: pointer;
+}
+.profile__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.profile__img {
+  position: relative;
+  background-color: #ffe7cc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+}
+.profile__img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
+}
+.profile__img div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  background-color: #1671d9;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+}
+.profile__img div svg {
+  fill: #fff;
+  width: 10px;
+  height: 10px;
+}
+.profile__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.profile__title p {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  color: #0f0f0f;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.profile__title span {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  color: #98a2b3;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.logout {
+  stroke: #0f0f0f;
+  width: 22px;
+  height: 22px;
+  transition: 0.3s;
+}
+.logout:hover {
+  stroke: #00c0ea;
+}
+
+@media screen and (max-width: 322px) {
+  .sidebar {
+    position: absolute;
+    background-color: #fcfcfc;
+    width: 272px;
+    height: 100%;
+    transition: 0.3s ease;
+    z-index: 10;
+  }
+  .sidebar__logo svg {
+    display: block;
+    stroke: #00c0ea;
+  }
+  .sidebar__close {
+    left: -100%;
+  }
+  .sidebar__logo img {
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 323px) and (max-width: 376px) {
+  .sidebar {
+    position: absolute;
+    background-color: #fcfcfc;
+    width: 272px;
+    height: 100%;
+    transition: 0.3s ease;
+    z-index: 10;
+  }
+  .sidebar__logo svg {
+    display: block;
+    stroke: #00c0ea;
+  }
+  .sidebar__close {
+    left: -100%;
+  }
+  .sidebar__logo img {
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 426px) {
+  .sidebar {
+    position: absolute;
+    background-color: #fcfcfc;
+    width: 272px;
+    height: 100%;
+    transition: 0.3s ease;
+    z-index: 10;
+  }
+  .sidebar__logo svg {
+    display: block;
+    stroke: #00c0ea;
+  }
+  .sidebar__close {
+    left: -100%;
+  }
+  .sidebar__logo img {
+    width: 90px;
+  }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .sidebar {
+    position: absolute;
+    background-color: #fcfcfc;
+    width: 272px;
+    height: 100%;
+    transition: 0.3s ease;
+    z-index: 10;
+  }
+  .sidebar__logo svg {
+    display: block;
+    stroke: #00c0ea;
+  }
+  .sidebar__close {
+    left: -100%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 250px;
+  }
+}
