@@ -9,8 +9,8 @@ const Home = ({ toggleShowMenu }) => {
 
     const customColumns = [
         {
-            name: 'Merchant',
-            selector: "Merchant",
+            name: 'Tutors',
+            selector: "Tutors",
             cell: row => (
                 <div className='table__merchants'>
                     <img src={row.pictureAddress} alt="Profile" width={70} />
@@ -136,7 +136,7 @@ const Home = ({ toggleShowMenu }) => {
                 </div>
                 <div className='main__content-table-container'>
                     <div className='main__content-table-head'>
-                        <h2>Approve Merchants</h2>
+                        <h2>Approve Tutors</h2>
                         {/* <div>
                             <input type="text" placeholder='Search' />
                             <IoIosSearch />
