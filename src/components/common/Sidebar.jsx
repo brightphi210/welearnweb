@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom'
 import { FaCheck } from "react-icons/fa6";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { HiOutlineUsers } from "react-icons/hi2";
+import { MdPayment } from "react-icons/md";
+import { FaChalkboardTeacher } from "react-icons/fa";
 
 
 import "./Sidebar.css"
@@ -52,9 +54,20 @@ const Sidebar = ({ toggleRemoveMenu, removeMenu }) => {
                                 isActive ? "sidebar-link active" : "sidebar-link"
                             }
                         >
-                            <HiOutlineUsers />
+                            <FaChalkboardTeacher />
                             <span>
                                 Tutors
+                            </span>
+                        </NavLink>
+                        <NavLink
+                            to="payments"
+                            className={({ isActive }) =>
+                                isActive ? "sidebar-link active" : "sidebar-link"
+                            }
+                        >
+                            <MdPayment />
+                            <span>
+                                Payments
                             </span>
                         </NavLink>
                     </div>

@@ -1,0 +1,227 @@
+.tutor__head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tutor__head-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  width: 100%;
+}
+.tutor__head-left img {
+  width: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #00c0ea;
+}
+.tutor__head-left h2 {
+  font-size: 1.5rem;
+}
+.tutor__head-left p {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  font-weight: 400;
+  color: #555555;
+}
+.tutor__head-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: 100%;
+}
+.tutor__head-right button {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  font-weight: 500;
+  padding: 1rem 2.6rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+.tutor__head-right button:first-child {
+  background-color: #00c0ea;
+  color: #fff;
+  border: 1px solid #00c0ea;
+  transition: 0.3s ease-in-out;
+}
+.tutor__head-right button:first-child:hover {
+  background-color: transparent;
+  color: #00c0ea;
+}
+.tutor__head-right button.activate {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+  transition: 0.3s ease-in-out;
+}
+.tutor__head-right button.activate:hover {
+  background-color: #000;
+  color: #fff;
+}
+.tutor__head-right button:last-child {
+  background-color: transparent;
+  border: 1px solid #e9240a;
+  color: #e9240a;
+  transition: 0.3s ease-in-out;
+}
+.tutor__head-right button:last-child:hover {
+  background-color: #e9240a;
+  color: #fff;
+}
+
+.tutor__bio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  margin-top: 1rem;
+}
+.tutor__bio h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.tutor__bio p {
+  line-height: 2.3rem;
+}
+
+.tutor__work {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  margin-top: 1rem;
+}
+.tutor__work h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.tutor__work p {
+  font-size: 1rem;
+}
+.tutor__work p span {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 322px) {
+  .tutor__head {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .tutor__head-left img {
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #00c0ea;
+  }
+  .tutor__head-left h2 {
+    font-size: 1.3rem;
+  }
+  .tutor__head-left p {
+    font-family: "Avenir Next LT Pro", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #555555;
+  }
+  .tutor__bio p {
+    line-height: 2rem;
+    font-size: 0.9rem;
+  }
+  .tutor__work p {
+    font-size: 0.9rem;
+  }
+  .tutor__head-right button {
+    font-family: "Avenir Next LT Pro", sans-serif;
+    font-weight: 500;
+    padding: 0.9rem 1.3rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  .tutor__head-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 323px) and (max-width: 376px) {
+  .tutor__head {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .tutor__head-left img {
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #00c0ea;
+  }
+  .tutor__head-left h2 {
+    font-size: 1.3rem;
+  }
+  .tutor__head-left p {
+    font-family: "Avenir Next LT Pro", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #555555;
+  }
+  .tutor__bio p {
+    line-height: 2rem;
+    font-size: 0.9rem;
+  }
+  .tutor__work p {
+    font-size: 0.9rem;
+  }
+  .tutor__head-right button {
+    font-family: "Avenir Next LT Pro", sans-serif;
+    font-weight: 500;
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  .tutor__head-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 426px) {
+  .tutor__head {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .tutor__head-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    width: 100%;
+  }
+  .tutor__head-right button {
+    font-family: "Avenir Next LT Pro", sans-serif;
+    font-weight: 500;
+    padding: 1rem 2.3rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+  }
+}
