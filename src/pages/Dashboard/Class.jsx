@@ -1,46 +1,59 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Navbar from '../../components/common/Navbar'
-import { IoIosSearch } from 'react-icons/io'
-import DataTable from 'react-data-table-component'
-import { PiTrashSimpleBold } from 'react-icons/pi'
-import { Checkbox } from '@mui/material';
-import { Link } from 'react-router-dom'
+import toast, { Toaster } from 'react-hot-toast';
+import { PiTrashSimpleBold } from 'react-icons/pi';
+import DataTable from 'react-data-table-component';
+import { Checkbox, CircularProgress } from '@mui/material';
+import { HiPlus } from "react-icons/hi";
 
-import AuthContext from '../../context/AuthContext'
-import toast, { Toaster } from 'react-hot-toast'
 
-const Parents = ({ toggleShowMenu }) => {
+import AuthContext from '../../context/AuthContext';
+import Navbar from '../../components/common/Navbar';
+import { Link } from 'react-router-dom';
+
+const Class = ({ toggleShowMenu }) => {
     const [selectedRows, setSelectedRows] = useState([]);
+    const [loading, setLoading] = useState(false)
 
-    const { allParents, getParents } = useContext(AuthContext)
-
+    const { classes, getClasses, authTokens } = useContext(AuthContext)
 
     const handleChange = ({ selectedRows }) => {
         setSelectedRows(selectedRows)
     };
 
     useEffect(() => {
-        getParents()
-    }, [allParents])
+        getClasses()
+    }, [classes])
 
     const customColumns = [
         {
-            name: 'Parents',
-            selector: "Parents",
+            name: 'Classes',
+            selector: "Classes",
             cell: row => (
                 <div className='table__merchants'>
-                    <img src={row.profile_pic} alt="Profile" width={70} />
+                    {/* <img src={row.profile_pic} alt="Profile" width={70} /> */}
                     <div>
-                        <p>{row.user.name}</p>
-                        <span>{row.lastname}</span>
+                        <p>{row.class_name}</p>
+                        {/* <span>{row.lastname}</span> */}
                     </div>
                 </div>
             ),
             center: true
         },
         {
-            name: 'Email',
-            selector: row => row.user.email,
+            name: 'Duration',
+            selector: row => row.duration,
+            style: {
+                color: "#000",
+                fontFamily: "Avenir Next LT Pro, sans-serif",
+                fontWeight: 500,
+                fontSize: "13px",
+                width: "350px"
+            },
+            center: true
+        },
+        {
+            name: 'Price',
+            selector: row => row.price,
             style: {
                 color: "#000",
                 fontFamily: "Avenir Next LT Pro, sans-serif",
@@ -54,7 +67,11 @@ const Parents = ({ toggleShowMenu }) => {
             name: 'Action',
             cell: (row) => (
                 <div className='table__user__action-btns'>
-                    <PiTrashSimpleBold className='trash' onClick={() => handleDelete(row.user.id)} />
+                    {loading ? (
+                        <CircularProgress color="inherit" size="20px" />
+                    ) : (
+                        <PiTrashSimpleBold className='trash' onClick={() => handleDelete(row.id)} />
+                    )}
                 </div>
             ),
             button: true,
@@ -96,15 +113,21 @@ const Parents = ({ toggleShowMenu }) => {
     };
 
     const handleDelete = async (id) => {
+        setLoading(true)
+
         try {
-            let response = await fetch(`https://welearnapi.fun/api/user/update/${id}/`, {
+            let response = await fetch(`https://welearnapi.fun/api/classes/update/${id}/`, {
                 method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${authTokens.access}`
+                }
             })
 
             const data = await response.json()
 
             if (response.status === 204 || response.status === 200) {
-                toast.success(`Parent Delete Successfully`, {
+                toast.success(`Tutor Delete Successfully`, {
                     duration: 4000,
                     position: "top-center",
                     style: {
@@ -115,7 +138,7 @@ const Parents = ({ toggleShowMenu }) => {
                     },
                 });
             } else {
-                toast.error(`Failed to delete parent account ${response.statusText}`, {
+                toast.error(`Failed to delete tutor account ${response.statusText}`, {
                     duration: 4000,
                     position: "top-center",
                     style: {
@@ -125,10 +148,12 @@ const Parents = ({ toggleShowMenu }) => {
                         fontSize: "0.9rem",
                     },
                 });
-                console.log("Failed to delete parent account:", data);
+                console.log("Failed to delete tutor account:", data);
             }
         } catch (error) {
-            console.log("Failed to delete parent account", error)
+            console.log("Failed to delete tutor account", error)
+        } finally {
+            setLoading(false)
         }
     }
 
@@ -140,18 +165,20 @@ const Parents = ({ toggleShowMenu }) => {
                 <div className="main__content">
                     <div className='main__content-table-container'>
                         <div className='main__content-table-head'>
-                            <h2>Parents</h2>
-                            <div>
-                                <input type="text" placeholder='Search' />
-                                <IoIosSearch />
-                            </div>
+                            <h2>Classes</h2>
+                            <Link to="/create-class">
+                                <button>
+                                    <HiPlus />
+                                    Create Class
+                                </button>
+                            </Link>
                         </div>
                     </div>
                     <div className='main__content-table'>
                         <DataTable
                             title=""
                             columns={customColumns}
-                            data={allParents}
+                            data={classes}
                             customStyles={customStyles}
                             responsive
                             selectableRows
@@ -169,4 +196,4 @@ const Parents = ({ toggleShowMenu }) => {
     )
 }
 
-export default Parents
+export default Class

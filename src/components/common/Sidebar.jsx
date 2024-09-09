@@ -6,6 +6,7 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 import { HiOutlineUsers } from "react-icons/hi2";
 import { MdPayment } from "react-icons/md";
 import { FaChalkboardTeacher } from "react-icons/fa";
+import { MdOutlineClass } from "react-icons/md";
 
 
 import "./Sidebar.css"
@@ -15,7 +16,7 @@ import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 
 const Sidebar = ({ toggleRemoveMenu, removeMenu }) => {
-    // const { logoutUser } = useContext(AuthContext)
+    const { logoutUser } = useContext(AuthContext)
 
     return (
         <div className={`sidebar ${removeMenu}`} >
@@ -60,6 +61,17 @@ const Sidebar = ({ toggleRemoveMenu, removeMenu }) => {
                             </span>
                         </NavLink>
                         <NavLink
+                            to="class"
+                            className={({ isActive }) =>
+                                isActive ? "sidebar-link active" : "sidebar-link"
+                            }
+                        >
+                            <MdOutlineClass />
+                            <span>
+                                Classes
+                            </span>
+                        </NavLink>
+                        <NavLink
                             to="payments"
                             className={({ isActive }) =>
                                 isActive ? "sidebar-link active" : "sidebar-link"
@@ -86,7 +98,7 @@ const Sidebar = ({ toggleRemoveMenu, removeMenu }) => {
                             </div>
                         </div>
 
-                        <FiLogOut className="logout" onClick={{}} />
+                        <FiLogOut className="logout" onClick={logoutUser} />
                     </div>
                 </div>
             </div>

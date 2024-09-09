@@ -1,0 +1,121 @@
+.create__class {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 2rem;
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  width: 80%;
+  height: 100%;
+}
+.create__class div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  width: 100%;
+}
+.create__class div input {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  color: rgb(109, 109, 109);
+  background-color: transparent;
+  padding: 1rem 1rem;
+  border: 1px solid rgb(222, 222, 222);
+  border-radius: 5px;
+  width: 100%;
+}
+.create__class div input::placeholder {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: rgb(173, 173, 173);
+}
+.create__class div input:focus {
+  outline-color: rgb(222, 222, 222);
+}
+.create__class div select {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  color: rgb(109, 109, 109);
+  background-color: transparent;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgb(222, 222, 222);
+  border-radius: 5px;
+  width: 100%;
+}
+.create__class button {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+
+  padding: 0.8rem 1rem;
+  align-self: flex-end;
+  width: 20%;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #00c0ea;
+  background-color: #00c0ea;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.create__class button:hover {
+  background-color: #009cbf;
+}
+
+@media screen and (max-width: 322px) {
+  .create__class {
+    padding: 0rem;
+    width: 100%;
+  }
+  .create__class div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 100%;
+  }
+  .create__class button {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 323px) and (max-width: 376px) {
+  .create__class {
+    padding: 1rem;
+    width: 100%;
+  }
+  .create__class div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 100%;
+  }
+  .create__class button {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 426px) {
+  .create__class {
+    padding: 1rem;
+    width: 100%;
+  }
+  .create__class button {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .create__class {
+    width: 100%;
+  }
+}

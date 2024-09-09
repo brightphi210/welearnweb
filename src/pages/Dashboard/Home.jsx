@@ -1,11 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Navbar from "../../components/common/Navbar"
 import DataTable from 'react-data-table-component';
 import Checkbox from '@mui/material/Checkbox';
-import approveMerchants from '../../components/lib/approveMerchants';
+import toast, { Toaster } from 'react-hot-toast';
+
+import AuthContext from '../../context/AuthContext';
 
 const Home = ({ toggleShowMenu }) => {
     const [selectedRows, setSelectedRows] = useState([]);
+    const { approvableTutors, getUnApprovedTutors, getParents, getTutors, allParents, allTutors, authTokens } = useContext(AuthContext)
+
+    useEffect(() => {
+        getUnApprovedTutors()
+        getParents()
+        getTutors()
+    }, [approvableTutors, allParents, allTutors])
 
     const customColumns = [
         {
@@ -13,10 +22,9 @@ const Home = ({ toggleShowMenu }) => {
             selector: "Tutors",
             cell: row => (
                 <div className='table__merchants'>
-                    <img src={row.pictureAddress} alt="Profile" width={70} />
+                    <img src={row.profile_pic} alt="Profile" width={70} />
                     <div>
-                        <p>{row.firstname}</p>
-                        <span>{row.lastname}</span>
+                        <p>{row.user.name}</p>
                     </div>
                 </div>
             ),
@@ -24,7 +32,7 @@ const Home = ({ toggleShowMenu }) => {
         },
         {
             name: 'Email',
-            selector: row => row.email,
+            selector: row => row.user.email,
             style: {
                 color: "#000",
                 fontFamily: "Avenir Next LT Pro, sans-serif",
@@ -36,7 +44,7 @@ const Home = ({ toggleShowMenu }) => {
         },
         {
             name: 'Status',
-            selector: row => row.verificationStatus,
+            selector: row => row.is_verified === false ? "Pending" : "Active",
             style: {
                 color: "#000",
                 fontFamily: "Avenir Next LT Pro, sans-serif",
@@ -51,10 +59,9 @@ const Home = ({ toggleShowMenu }) => {
             name: 'Action',
             cell: row => (
                 <>
-                    {row.verificationStatus === 'false' && (
+                    {row.is_verified === false && (
                         <div className='table__action-btns'>
-                            <button onClick={(e) => handleDecline(row._id, e)}>Decline</button>
-                            <button onClick={(e) => handleApprove(row._id, e)}>Approve</button>
+                            <button onClick={(e) => handleApprove(row.id, e)}>Approve</button>
                         </div>
                     )}
                 </>
@@ -98,11 +105,46 @@ const Home = ({ toggleShowMenu }) => {
     };
 
     const handleApprove = async (id, e) => {
+        try {
+            e.preventDefault()
 
-    };
-
-    const handleDecline = async (id, e) => {
-
+            let response = await fetch(`https://welearnapi.fun/api/instructor-profiles/update/${id}/`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${authTokens.access}`,
+                },
+                body: JSON.stringify({
+                    is_verified: true
+                })
+            })
+            if (response.ok) {
+                toast.success(`Tutor Approved Successfully ${response.statusText}`, {
+                    duration: 4000,
+                    position: "top-center",
+                    style: {
+                        backgroundColor: "#E3FDCA",
+                        fontFamily: "Poppins, sans-serif",
+                        fontWeight: "bolder",
+                        fontSize: "0.9rem",
+                    },
+                });
+            } else {
+                toast.error(`Failed to approve pending tutors ${response.statusText}`, {
+                    duration: 4000,
+                    position: "top-center",
+                    style: {
+                        backgroundColor: "#FFCCCC",
+                        fontFamily: "Poppins, sans-serif",
+                        fontWeight: "bolder",
+                        fontSize: "0.9rem",
+                    },
+                });
+                console.log("Failed to fetch pending tutors:", response.statusText);
+            }
+        } catch (error) {
+            console.log("Failed to approve tutor", error)
+        }
     };
 
     const handleChange = ({ selectedRows }) => {
@@ -110,57 +152,60 @@ const Home = ({ toggleShowMenu }) => {
     };
 
     return (
-        <div className='main__container'>
-            <Navbar toggleShowMenu={toggleShowMenu} />
-            <div className="main__content">
-                <div className="main__content-assets-container">
-                    <div className='main__content-assets-head'>
-                        <h2>Dashboard</h2>
-                    </div>
-                    <div className='main__content-assets'>
-                        <div className='main__content-asset users'>
-                            <p>Pending Tutors</p>
-                            <h2>9</h2>
+        <>
+            <Toaster />
+            <div className='main__container'>
+                <Navbar toggleShowMenu={toggleShowMenu} />
+                <div className="main__content">
+                    <div className="main__content-assets-container">
+                        <div className='main__content-assets-head'>
+                            <h2>Dashboard</h2>
                         </div>
+                        <div className='main__content-assets'>
+                            <div className='main__content-asset users'>
+                                <p>Pending Tutors</p>
+                                <h2>{approvableTutors.length}</h2>
+                            </div>
 
-                        <div className='main__content-asset merchants'>
-                            <p>Total Tutors</p>
-                            <h2>4</h2>
-                        </div>
+                            <div className='main__content-asset merchants'>
+                                <p>Total Tutors</p>
+                                <h2>{allTutors.length}</h2>
+                            </div>
 
-                        <div className='main__content-asset riders'>
-                            <p>Total Parents</p>
-                            <h2>5</h2>
+                            <div className='main__content-asset riders'>
+                                <p>Total Parents</p>
+                                <h2>{allParents.length}</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className='main__content-table-container'>
-                    <div className='main__content-table-head'>
-                        <h2>Approve Tutors</h2>
-                        {/* <div>
+                    <div className='main__content-table-container'>
+                        <div className='main__content-table-head'>
+                            <h2>Approve Tutors</h2>
+                            {/* <div>
                             <input type="text" placeholder='Search' />
                             <IoIosSearch />
                         </div> */}
-                    </div>
-                    <div className='main__content-table'>
-                        <DataTable
-                            title=""
-                            columns={customColumns}
-                            data={approveMerchants}
-                            customStyles={customStyles}
-                            responsive
-                            selectableRows
-                            onSelectedRowsChange={handleChange}
-                            pagination
-                            paginationPerPage={5}
-                            selectableRowsComponent={Checkbox}
-                            highlightOnHover
-                            pointerOnHover
-                        />
+                        </div>
+                        <div className='main__content-table'>
+                            <DataTable
+                                title=""
+                                columns={customColumns}
+                                data={approvableTutors}
+                                customStyles={customStyles}
+                                responsive
+                                selectableRows
+                                onSelectedRowsChange={handleChange}
+                                pagination
+                                paginationPerPage={5}
+                                selectableRowsComponent={Checkbox}
+                                highlightOnHover
+                                pointerOnHover
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
