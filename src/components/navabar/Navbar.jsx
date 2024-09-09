@@ -6,6 +6,7 @@ import { IoCloseCircle } from "react-icons/io5";
 import Logo from '../media/WELEARN png.png';
 import './Navbar.css'
 import appk from '../media/welearn.apk'
+import appk2 from '../media/welearnnew.apk'
 
 export const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -22,7 +23,7 @@ export const Navbar = () => {
       </div>
       <div className='navbar-links_container'>     
           <div className="navbar-download">
-            <a href={appk}><button>Download App</button></a>
+            <a href={appk2}><button>Download App</button></a>
           </div>
         <div className="navbar-menu">
           <CgMenuLeft color='#00262F' fontSize={35} onClick={() => setToggleMenu(true)} />
@@ -39,7 +40,7 @@ export const Navbar = () => {
                   <li className='active'><a href="#waitlist">Waitlist</a></li>
                 </ul>
                 <div className="navbar-menu-download">
-                  <a href={appk}><button>Download App</button></a>
+                  <a href={appk2}><button>Download App</button></a>
                 </div>            
               </div>
             </div>
