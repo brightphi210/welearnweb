@@ -16,6 +16,7 @@ export const AuthProvider = ({ children }) => {
   const [allTutors, setAllTutors] = useState([]);
   const [approvableTutors, setApprovableTutors] = useState([]);
   const [classes, setClasses] = useState([]);
+  const [pendingPayment, setPendingPayment] = useState([]);
 
   const [authTokens, setAuthTokens] = useState(() =>
     localStorage.getItem("Tokens")
@@ -235,6 +236,39 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const getPendingPayments = async () => {
+    try {
+      let response = await fetch("https://welearnapi.fun/api/class-bookings/", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${authTokens.access}`,
+        },
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        const pending = data.filter((pay) => pay.isPayed === null);
+        setPendingPayment(pending);
+      } else {
+        toast.error(`Failed to fetch pending payments ${response.statusText}`, {
+          duration: 4000,
+          position: "top-center",
+          style: {
+            backgroundColor: "#FFCCCC",
+            fontFamily: "Poppins, sans-serif",
+            fontWeight: "bolder",
+            fontSize: "0.9rem",
+          },
+        });
+        console.log("Failed to pending payments", response.statusText);
+      }
+    } catch (error) {
+      console.error("Failed to pending payments", error);
+    }
+  };
+
   const updateToken = async () => {
     console.log("Token Updated");
     let response = await fetch("https://welearnapi.fun/api/token/refresh/", {
@@ -290,6 +324,8 @@ export const AuthProvider = ({ children }) => {
         getTutors,
         getClasses,
         classes,
+        pendingPayment,
+        getPendingPayments,
       }}
     >
       {children}
