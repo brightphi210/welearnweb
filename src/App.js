@@ -8,6 +8,7 @@ import Privacy from "./pages/Privacy";
 import PrivateRoute from "./utils/PrivateRoute";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import { AuthProvider } from "./context/AuthContext";
+import Verify from "./pages/Verify";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <AuthProvider>
           <Routes>
             <Route path={"/"} element={<Home />} />
+            <Route path={"/verify"} element={<Verify />} />
             <Route path={"/login"} element={<Login />} />
             <Route path={"/privacy"} element={<Privacy />} />
 
