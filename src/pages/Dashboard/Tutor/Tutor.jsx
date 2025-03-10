@@ -170,7 +170,7 @@ const Tutor = ({ toggleShowMenu }) => {
           console.error("Error formatting date:", error);
           return "Date format error";
         }
-      };
+    };
 
     if (loading) {
         return (

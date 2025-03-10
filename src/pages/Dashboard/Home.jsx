@@ -144,9 +144,11 @@ const Home = ({ toggleShowMenu }) => {
         }
     };
 
+    const [isLoading, setIsLoading] = useState(false)
     const handleApprove = async (id, e) => {
         try {
             e.preventDefault()
+            setIsLoading(true)
 
             let response = await fetch(`https://welearnapi.fun/api/instructor-profiles/update/${id}/`, {
                 method: "PATCH",
@@ -159,6 +161,7 @@ const Home = ({ toggleShowMenu }) => {
                 })
             })
             if (response.ok) {
+                setIsLoading(false)
                 toast.success(`Tutor Approved Successfully ${response.statusText}`, {
                     duration: 4000,
                     position: "top-center",
@@ -170,6 +173,7 @@ const Home = ({ toggleShowMenu }) => {
                     },
                 });
             } else {
+                setIsLoading(false)
                 toast.error(`Failed to approve pending tutors ${response.statusText}`, {
                     duration: 4000,
                     position: "top-center",
