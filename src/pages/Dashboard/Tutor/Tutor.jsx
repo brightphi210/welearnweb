@@ -13,6 +13,8 @@ const Tutor = ({ toggleShowMenu }) => {
     const [isLoading, setIsLoading] = useState(false)
     const [tutorDetails, setTutorDetails] = useState({})
 
+    console.log('Tutor Details:', tutorDetails)
+
     const { authTokens } = useContext(AuthContext)
 
     const { tutorId } = useParams()
@@ -145,6 +147,31 @@ const Tutor = ({ toggleShowMenu }) => {
         fetchDetails()
     }, [tutorId])
 
+
+    const formatDate = (dateString) => {
+        if (!dateString) {
+          return "Not available";
+        }
+        
+        try {
+          const date = new Date(dateString);
+          
+          // Check if date is valid
+          if (isNaN(date.getTime())) {
+            return "Invalid date";
+          }
+          
+          return new Intl.DateTimeFormat('en-US', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+          }).format(date);
+        } catch (error) {
+          console.error("Error formatting date:", error);
+          return "Date format error";
+        }
+      };
+
     if (loading) {
         return (
             <div className='loading'>
@@ -168,6 +195,7 @@ const Tutor = ({ toggleShowMenu }) => {
                                 <img src={tutorDetails?.profile_pic} alt="Parent Profile" />
                                 <h2>{tutorDetails?.user?.name}</h2>
                                 <p>{tutorDetails?.user?.email}</p>
+                                <p><span style={{color: 'gray', fontSize: '14px'}}>Date Joined: </span> {formatDate(tutorDetails?.user?.date_joined)}</p>
                             </div>
                             <div className="tutor__head-right">
                                 {/* <button>Review</button> */}

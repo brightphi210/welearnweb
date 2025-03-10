@@ -18,6 +18,31 @@ const Tutors = ({ toggleShowMenu }) => {
         setSelectedRows(selectedRows)
     };
 
+
+    const formatDate = (dateString) => {
+        if (!dateString) {
+          return "Not available";
+        }
+        
+        try {
+          const date = new Date(dateString);
+          
+          // Check if date is valid
+          if (isNaN(date.getTime())) {
+            return "Invalid date";
+          }
+          
+          return new Intl.DateTimeFormat('en-US', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+          }).format(date);
+        } catch (error) {
+          console.error("Error formatting date:", error);
+          return "Date format error";
+        }
+    };
+
     useEffect(() => {
         getTutors()
     }, [allTutors])
@@ -40,6 +65,19 @@ const Tutors = ({ toggleShowMenu }) => {
         {
             name: 'Email',
             selector: row => row.user.email,
+            style: {
+                color: "#000",
+                fontFamily: "Avenir Next LT Pro, sans-serif",
+                fontWeight: 500,
+                fontSize: "13px",
+                width: "350px"
+            },
+            center: true
+        },
+
+        {
+            name: 'Date Joined',
+            selector: row => formatDate(row.user.date_joined),
             style: {
                 color: "#000",
                 fontFamily: "Avenir Next LT Pro, sans-serif",
