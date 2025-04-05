@@ -56,7 +56,7 @@ export const AuthProvider = ({ children }) => {
           setAuthTokens(data);
           setUser(decode);
           localStorage.setItem("Tokens", JSON.stringify(data));
-          navigate("/dashboard");
+          navigate("/dashboard", {replace: true});
         } else {
           toast.error("User is not an Admin!!", {
             duration: 3000,
